@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootStatus" prefHeight="644.0" prefWidth="1058.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StatusFormController">
+   <children>
+      <AnchorPane layoutY="101.0" prefHeight="88.0" prefWidth="1074.0" style="-fx-background-color: white;">
+         <children>
+            <AnchorPane layoutX="14.0" prefHeight="83.0" prefWidth="189.0">
+               <children>
+                  <ImageView fitHeight="83.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/icons8-car-100.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblCar" layoutX="117.0" layoutY="25.0" text="0">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="269.0" prefHeight="83.0" prefWidth="189.0">
+               <children>
+                  <ImageView fitHeight="83.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/icons8-pickup-front-view-100.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblVan" layoutX="117.0" layoutY="25.0" text="0">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="536.0" prefHeight="83.0" prefWidth="189.0">
+               <children>
+                  <ImageView fitHeight="83.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/icons8-bus-100.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblBus" layoutX="117.0" layoutY="25.0" text="0">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="869.0" layoutY="5.0" prefHeight="83.0" prefWidth="189.0">
+               <children>
+                  <ImageView fitHeight="83.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/icons8-motorcycle-100.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblBike" layoutX="117.0" layoutY="25.0" text="0">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="386.0" layoutY="14.0" prefHeight="41.0" prefWidth="311.0" style="-fx-font-family: Open Sans; -fx-background-radius: 30; -fx-background-color: linear-gradient(to right top, #053723, #106232, #368f38, #69bd32, #a8eb12);;" text="Sanara Rent Car" textFill="WHITE">
+         <font>
+            <Font name="Liberation Mono Bold Italic" size="29.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtDate" layoutX="500.0" layoutY="55.0" prefHeight="18.0" prefWidth="118.0" textFill="#1b23ae">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <LineChart fx:id="lineChartload" layoutX="33.0" layoutY="230.0" prefHeight="400.0" prefWidth="989.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <JFXButton layoutX="994.0" layoutY="10.0" onAction="#backbtnOnAction" text=" ">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/icons8-back-100.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

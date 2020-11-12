@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="708.0" prefWidth="1185.0" style="-fx-background-color: #f1f2f6;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientsStaticFormController">
+   <children>
+      <JFXTextField fx:id="txtCustomerID" labelFloat="true" layoutX="225.0" layoutY="68.0" onAction="#CustomerIdOnAction" prefHeight="36.0" prefWidth="237.0" promptText="Customer ID : " style="-fx-background-radius: 30; -fx-background-color: #dfe6e9;" />
+      <JFXTextField fx:id="txtCustomerName" labelFloat="true" layoutX="225.0" layoutY="132.0" prefHeight="36.0" prefWidth="237.0" promptText="Customer Name : " style="-fx-background-radius: 30; -fx-background-color: #dfe6e9;" />
+      <JFXTextField fx:id="txtCustomerAddress" labelFloat="true" layoutX="225.0" layoutY="199.0" prefHeight="36.0" prefWidth="237.0" promptText="Customer Address : " style="-fx-background-radius: 30; -fx-background-color: #dfe6e9;" />
+      <JFXTextField fx:id="txtCustomerTPNumber" labelFloat="true" layoutX="225.0" layoutY="271.0" prefHeight="36.0" prefWidth="237.0" promptText="Customer TNumber : " style="-fx-background-radius: 30; -fx-background-color: #dfe6e9;" />
+      <JFXButton fx:id="txtaddcustomerOnAction" buttonType="RAISED" layoutX="646.0" layoutY="65.0" onAction="#addcustomerOnAction" prefHeight="38.0" prefWidth="188.0" ripplerFill="#b5eb04" style="-fx-background-radius: 0 60 0 60; -fx-background-color: white;" text="Add">
+         <graphic>
+            <ImageView fitHeight="61.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/icons8-add-user-male-48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblCustomer" layoutY="359.0" prefHeight="350.0" prefWidth="1185.0" style="-fx-background-color: #f1f2f6;">
+        <columns>
+          <TableColumn fx:id="colCustomerID" prefWidth="207.0" text="Customer Id" />
+          <TableColumn fx:id="colCustomerName" prefWidth="298.0" text="Customer Name" />
+            <TableColumn fx:id="colCustomerAddress" prefWidth="283.0" text="Customer Address " />
+            <TableColumn fx:id="colCustomerTPNumber" prefWidth="267.0" text="Customer TPNumber" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="txtdeletecustomerOnAction" buttonType="RAISED" layoutX="923.0" layoutY="65.0" onAction="#deletecustomerOnAction" prefHeight="38.0" prefWidth="188.0" ripplerFill="#eb2f05" style="-fx-background-radius: 0 60 0 60; -fx-background-color: white;" text="Delete">
+         <graphic>
+            <ImageView fitHeight="61.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/icons8-denied-48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="txtupdatecustomerOnAction" buttonType="RAISED" layoutX="646.0" layoutY="239.0" onAction="#updatecustomerOnAction" prefHeight="38.0" prefWidth="188.0" ripplerFill="#05adeb" style="-fx-background-radius: 0 60 0 60; -fx-background-color: white;" text="Update">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="61.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/icons8-update-user-skin-type-7-48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="txtclearcustomerOnAction" buttonType="RAISED" layoutX="931.0" layoutY="239.0" onAction="#clearcustomerOnAction" prefHeight="38.0" prefWidth="188.0" ripplerFill="#eb05bd" style="-fx-background-radius: 0 60 0 60; -fx-background-color: white;" text="Clear">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="61.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/icons8-broom-48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="87.0" layoutY="75.0" text="Customer ID :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="57.0" layoutY="139.0" text="Customer Name :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="206.0" text="Customer Address :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="278.0" text="Customer TNumber :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="87.0" layoutY="16.0" text="Customer ID :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbCustomerID" labelFloat="true" layoutX="225.0" layoutY="13.0" onAction="#cmbCustomerIDOnAction" prefHeight="28.0" prefWidth="237.0" promptText="Customers" style="-fx-background-radius: 30; -fx-background-color: #dfe6e9;" />
+   </children>
+</AnchorPane>

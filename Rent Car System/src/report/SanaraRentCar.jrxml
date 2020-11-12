@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.14.0.final using JasperReports Library version 6.14.0-2ab0d8625be255bf609c78e1181801213e51db8f  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SanaraRentCar" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="08f3bb13-0465-4bf7-a6e5-274d8aac6428">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<parameter name="Rent Id" class="java.lang.String"/>
+	<parameter name="Rent Date" class="java.lang.String"/>
+	<parameter name="Return Date" class="java.lang.String"/>
+	<parameter name="Vehicle Id" class="java.lang.String"/>
+	<parameter name="Charge Per Day" class="java.lang.String"/>
+	<parameter name="Advance" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select * from rentdtails]]>
+	</queryString>
+	<field name="rID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="rID"/>
+		<property name="com.jaspersoft.studio.field.label" value="rID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="rentdtails"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="rentDate" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="rentDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="rentDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="rentdtails"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="vID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="vID"/>
+		<property name="com.jaspersoft.studio.field.label" value="vID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="rentdtails"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="chargePerday" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="chargePerday"/>
+		<property name="com.jaspersoft.studio.field.label" value="chargePerday"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="rentdtails"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="rAdvance" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="rAdvance"/>
+		<property name="com.jaspersoft.studio.field.label" value="rAdvance"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="rentdtails"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="rStatus" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="rStatus"/>
+		<property name="com.jaspersoft.studio.field.label" value="rStatus"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="rentdtails"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="rID">
+		<groupExpression><![CDATA[$F{rID}]]></groupExpression>
+	</group>
+	<group name="rentDate">
+		<groupExpression><![CDATA[$F{rentDate}]]></groupExpression>
+	</group>
+	<group name="vID">
+		<groupExpression><![CDATA[$F{vID}]]></groupExpression>
+	</group>
+	<group name="chargePerday">
+		<groupExpression><![CDATA[$F{chargePerday}]]></groupExpression>
+	</group>
+	<group name="rAdvance">
+		<groupExpression><![CDATA[$F{rAdvance}]]></groupExpression>
+	</group>
+	<group name="rStatus">
+		<groupExpression><![CDATA[$F{rStatus}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="200" y="20" width="200" height="30" forecolor="#030202" uuid="ea2a07f8-5e6b-4827-85a2-1a7ae8bb5353"/>
+				<textElement>
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sanara Rent Car]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="56" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="259" splitType="Stretch">
+			<textField>
+				<reportElement x="300" y="0" width="100" height="30" uuid="b558fad6-ce51-4e31-bd3a-20a03f0c7595"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Rent Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="40" width="100" height="30" uuid="260dee10-c070-4e30-934f-f853fce91d43"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Vehicle Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="110" width="200" height="30" uuid="691c031e-fa22-4b0f-99ab-39c5be9f1596"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Rent Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="150" width="200" height="30" uuid="1b42f285-53b4-467f-8a65-941bfb299bf9"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Return Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="80" width="210" height="30" uuid="b0e3ef5a-d516-42a7-9917-41f979bafd0e"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Charge Per Day}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="190" width="190" height="30" uuid="27f55c4e-779f-4422-871c-0b72fae74ac4"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Advance}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="0" width="90" height="30" uuid="fe3324f9-cf50-4f5d-9cf0-3d5e6d52bebd"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Rent ID :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="40" width="110" height="30" uuid="881f15b3-189e-49d3-b693-fb68fa01bccc"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Vehicle ID :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="80" width="160" height="30" uuid="d72de351-aa02-4e21-a6cc-2f8eb9acf7de"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Charge Per Day :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="120" width="110" height="30" uuid="5cc0a6ce-5081-4df7-9e42-dd6a6557f2a7"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Rent Date :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="150" width="130" height="30" uuid="3e8a93d4-1f22-4bd3-839b-2beec4b1243c"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Return Date :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="190" width="100" height="30" uuid="21f2010d-2099-4f21-a6ea-4a5b0272c05a"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Advance :]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="708.0" prefWidth="1185.0" style="-fx-background-color: #f1f2f6;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VehicleStaticFormController">
+   <children>
+      <JFXTextField fx:id="txtVehicleID" labelFloat="true" layoutX="231.0" layoutY="65.0" prefHeight="28.0" prefWidth="190.0" promptText="Vehicle ID :" style="-fx-background-radius: 30; -fx-background-color: #dfe6e9;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="108.0" layoutY="68.0" text="Vehicle ID :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="116.0" text="Vehicle Name :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="159.0" text="Vehicle Model :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="90.0" layoutY="217.0" text="Vehicle Type:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="86.0" layoutY="272.0" text="Vehicle Color :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtVehicleName" labelFloat="true" layoutX="231.0" layoutY="113.0" prefHeight="28.0" prefWidth="190.0" promptText="Vehicle Name :" style="-fx-background-radius: 30; -fx-background-color: #dfe6e9;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtVehicleModel" labelFloat="true" layoutX="231.0" layoutY="159.0" prefHeight="28.0" prefWidth="190.0" promptText="Vehicle Model :" style="-fx-background-radius: 30; -fx-background-color: #dfe6e9;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtVehicleColor" labelFloat="true" layoutX="231.0" layoutY="269.0" prefHeight="28.0" prefWidth="190.0" promptText="Vehicle Color :" style="-fx-background-radius: 30; -fx-background-color: #dfe6e9;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="593.0" layoutY="77.0" onAction="#addOnAction" prefHeight="78.0" prefWidth="159.0" ripplerFill="#1ee505" style="-fx-background-radius: 0 60 0 60; -fx-background-color: white;" text="Add">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/icons8-add-100.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="882.0" layoutY="77.0" onAction="#deleteOnAction" prefHeight="78.0" prefWidth="184.0" ripplerFill="#e30707" style="-fx-background-radius: 0 60 0 60; -fx-background-color: white;" text="Delete">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/icons8-cancel-48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="593.0" layoutY="205.0" onAction="#updateOnAction" prefHeight="78.0" prefWidth="184.0" ripplerFill="#0949e3" style="-fx-background-radius: 0 60 0 60; -fx-background-color: white;" text="Update">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/icons8-restart-100.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="894.0" layoutY="214.0" onAction="#clearOnAction" prefHeight="78.0" prefWidth="184.0" ripplerFill="#13f01e" style="-fx-background-radius: 0 60 0 60; -fx-background-color: white;" text="Clear">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/icons8-empty-trash-100.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <TableView fx:id="tblVehicleStatus" layoutY="401.0" prefHeight="306.0" prefWidth="1185.0" style="-fx-background-color: #f1f2f6;">
+        <columns>
+          <TableColumn fx:id="colVhicleID" prefWidth="118.0" text="Vehicle ID " />
+          <TableColumn fx:id="colVehicleName" prefWidth="208.0" text="Vehicle Name " />
+            <TableColumn fx:id="colVehicleStatus" prefWidth="184.0" text="Vehicle Status" />
+            <TableColumn fx:id="colVehiclModel" prefWidth="204.0" text="Vehicle Model " />
+            <TableColumn fx:id="colVehicleType" prefWidth="243.0" text="Vehicle Type" />
+            <TableColumn fx:id="colVehicleColor" prefWidth="222.0" text="Vehicle Color " />
+        </columns>
+      </TableView>
+      <Label layoutX="81.0" layoutY="329.0" text="Vehicle status:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="510.0" layoutY="356.0" style="-fx-background-radius: 30; -fx-background-color: white;" text="Vehicle Status" textFill="#192a56">
+         <font>
+            <Font name="DejaVu Sans Bold" size="26.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbVehicleStatus" labelFloat="true" layoutX="231.0" layoutY="328.0" prefHeight="28.0" prefWidth="190.0" promptText="Vehicle Status :" style="-fx-background-radius: 30; -fx-background-color: #dfe6e9;" />
+      <JFXComboBox fx:id="cmbVehicleType" labelFloat="true" layoutX="231.0" layoutY="216.0" prefHeight="28.0" prefWidth="190.0" promptText="Vehicle Type:" style="-fx-background-radius: 30; -fx-background-color: #dfe6e9;" />
+      <Label layoutX="128.0" layoutY="21.0" text="Vehicle  :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbVehicle" labelFloat="true" layoutX="231.0" layoutY="20.0" onAction="#VehicleOnAction" prefHeight="28.0" prefWidth="184.0" promptText="Vehicle  :" style="-fx-background-radius: 30; -fx-background-color: #dfe6e9;" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="722.0" prefWidth="1039.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminDashBordFormController">
+   <children>
+      <AnchorPane prefHeight="80.0" prefWidth="1185.0" style="-fx-background-color: #3d3d3d;">
+         <children>
+            <JFXButton buttonType="RAISED" layoutY="-5.0" onAction="#HomeOnAction" prefHeight="83.0" prefWidth="181.0" ripplerFill="#141414" text="Home" textFill="WHITE" AnchorPane.topAnchor="-5.0">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/icons8-add-list-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="190.0" layoutY="2.0" onAction="#UsersStaticOnAction" prefHeight="78.0" prefWidth="181.0" ripplerFill="#222222" text="Users Static" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/icons8-add-user-male-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="567.0" layoutY="6.0" onAction="#VehicleStaticOnAction" prefHeight="70.0" prefWidth="196.0" ripplerFill="#030303" text="Vehicle Static" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/icons8-bus-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="763.0" layoutY="2.0" onAction="#BreakDownOnAction" prefHeight="78.0" prefWidth="216.0" ripplerFill="#030303" text="BreakDown Static" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/icons8-garage-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="371.0" layoutY="6.0" onAction="#clientstaticOnAction" prefHeight="70.0" prefWidth="196.0" ripplerFill="#222222" text="Client Static" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/icons8-add-user-male-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="979.0" layoutY="2.0" onAction="#BusinessStaticOnAction" prefHeight="78.0" prefWidth="206.0" ripplerFill="#030303" text="Business Static" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/icons8-money-transfer-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <BorderPane fx:id="root" layoutY="78.0" prefHeight="708.0" prefWidth="1185.0" />
+   </children>
+</AnchorPane>
